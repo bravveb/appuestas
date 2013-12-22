@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Apuestas</title>
+        <link rel="stylesheet"  href="dependencies/jquery.mobile.structure-1.3.2.min.css">
+        <link rel="stylesheet"  href="dependencies/jquery.mobile.theme-1.3.2.css">
+        <link rel="stylesheet"  href="dependencies/custom.css">
+        <script src="dependencies/jquery.js"></script>
+        <script src="dependencies/jquery.mobile-1.3.2.min.js"></script>
+        <script src="dependencies/funciones.js"></script>
+    </head>
+    <body style="background: #0079ca">
+        <div data-role="page" id="portada" class="portada">
+            <div data-role="content">
+                Cargando...
+                <br/><a href="#login" data-transition="fade">Siguiente</a>
+            </div>
+        </div>
+        <div data-role="page" id="login" class="login">
+            <div data-role="content">
+                <form name="frm_login">
+                    <input type="text" name="nombre" placeholder="Nombre">
+                    <input type="password" name="password" placeholder="Contrase&ntilde;a">
+                    <input type="button" onclick="validar_inicio_sesion();" value="ENTRAR">
+                    <br/>
+                    <a href="#registro" data-transition="slidedown">&iquest;A&uacute;n no te has registrado?</a><br/>
+                    <a href="#inicio" data-transition="fade">INICIO</a>
+                </form>
+                 
+            </div>
+        </div>
+        <div data-role="page" id="registro" class="login">
+            <div data-role="content">
+                <form id="frem_registro" name="frm_registro">
+                    <input type="text" name="nombre" placeholder="Nombre">
+                    <input type="password" name="password" placeholder="Contrase&ntilde;a">
+                    <input type="password" name="r_password" placeholder="Contrase&ntilde;a">
+                    <input type="button" onclick="validar_registro();" value="REGISTRAR">
+                    <br/>
+                    <a href="#login" data-transition="slideup">Volver al inicio de sesi&oacute;n</a><br/>
+                </form>
+            </div>
+        </div>
+        <div data-role="page" id="inicio">
+            <div data-role="panel" data-animate="overlay" id="mypanel" class="menu_lateral">
+                <div data-role="header" class="cabecera_menu">
+                    <span>MENU</span>
+                </div>
+                <ul>
+                    <li><a href="#inicio"><div class="enlaces_menu">Inicio</div></a></li>
+                    <li><a href="#inicio"><div class="enlaces_menu">Amigos</div></a></li>
+                    <li><a href="#registro"><div class="enlaces_menu">Mensajes <span class="mensajes_bu" id="mensajes_bu">1</span></div></a></li>
+                    <li><a href="#registro"><div class="enlaces_menu">Gestionar</div></a></li>
+                    <li><a href="#registro"><div class="enlaces_menu">Perfil</div></a></li>
+                    <li><a href="#registro"><div class="enlaces_menu">Cerrar sesi&oacute;n</div></a></li>
+                    <li><a href="#registro"><div class="enlaces_menu">Salir</div></a></li>
+                </ul>
+            </div>
+            <div data-role="header" class="cabecera">
+                <a href="#mypanel" class="enlace_menu">&nbsp;</a>
+                <span><img src="dependencies/images/quinielator.png" alt="quinielator"></span>
+                <a href="#mypanel" class="enlace_refrescar">&nbsp;</a>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" data-theme="d" data-divider-theme="d">
+                    <li data-role="list-divider">Los carramelos</li>
+                    <li><a href="#popupMenu" data-rel="popup" data-transition="slideup">
+                        <h3>REAL MADRID - REAL SOCIEDAD</h3>
+                        <p><strong class="resultado">Resultado:</strong> 5-0</p>
+                        <p><strong class="resultado">Tu apuesta:</strong> 1-0</p>
+                        <p><strong>Estado:</strong> Finalizada</p>
+                    </a></li>
+                </ul>
+            </div>
+            <div data-role="popup" id="popupMenu" data-theme="d">
+                    <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+                        <li data-role="divider" data-theme="e">Los carramelos</li>
+                        <li><a href="#">Ver apuestas</a></li>
+                        <li><a href="#">Tu apuesta</a></li>
+                        <li><a href="#">Ver clasificacion</a></li>
+                        <li><a href="#">Tus detalles</a></li>
+                    </ul>
+            </div>
+            <div data-role="footer" class="porcentaje">
+                <span>15%</span>Aciertos<br/>
+                <strong>10 de 50</strong><br/>
+                <span>50</span>Creditos
+            </div>
+        </div>
+    </body>
+</html>
